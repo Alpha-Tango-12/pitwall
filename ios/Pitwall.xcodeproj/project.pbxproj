@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD1989A9ACCCCE6FB6C4DF68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EBF4DB7B3FDD3CFA39887 /* ContentView.swift */; };
+		E865F055132A95A6F38EF8C0 /* PitwallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10491AA94ED1D4C0A26E5C2 /* PitwallApp.swift */; };
+		46FE16FB30FFFBD4AF2AC4FE /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0497F0C317FEE209E5DB6BC /* BadgeView.swift */; };
+		4203BCD01D69C618E6F627E3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CDC6503A65C8B00A0F062C /* CardView.swift */; };
+		3C58A510525C339E8D0989F3 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B37E9C28FA2D725BD20CA2 /* CountdownView.swift */; };
+		75B7A84C9CDCABCD112D03F3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE98488AA65BD44CA04406E /* ErrorView.swift */; };
+		D94C48EA9A8F1AAAE825F6AD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6DEC35DD12DC358A31F59A /* LoadingView.swift */; };
+		77515E3C96B2991E642AC778 /* TeamColorBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4635E05DFD4178D37E06F8 /* TeamColorBarView.swift */; };
+		FFECC3D4314C4C3ECF97589F /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61465605890278D991C894F9 /* Design.swift */; };
+		7CCDDDF51CFABE159108BFD3 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7EACF9EC01CDE5F2B0FF4 /* Flags.swift */; };
+		A09BFD74983125B9D6D22A86 /* Glossary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86318060E25B6D207B6ED1C /* Glossary.swift */; };
+		954206C3E75F7DBC5F714A93 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8CE4098BA1B62506EA8B0 /* Teams.swift */; };
+		F6F3F5EFB9161E0BD574409F /* TireCompounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E51DFBE3C129DBFA5A7F03 /* TireCompounds.swift */; };
+		E496853F8F80F5DB58EC9947 /* WeekendFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E08A4F07A555F2DB001C20D /* WeekendFormat.swift */; };
+		82931CD0BB544DFA7CDDC3AD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5EC6653A1212D72A52A172 /* MockData.swift */; };
+		2E9FDD5EB7FDE45826C818B0 /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2EA4791B1BDBC27EF82DCE /* Race.swift */; };
+		A5F4635AA7DFBA58E844C4D5 /* RaceEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6F507C78EAC23CE4BBA385 /* RaceEvent.swift */; };
+		04ABD9DAF1F506793DD2CE12 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B968BD2E99308BFAA084D9 /* Session.swift */; };
+		1FF7FF9B9ABE548B4FFCAEC1 /* Standing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0157E51584FDEBFF63D96044 /* Standing.swift */; };
+		967329526F9D081DA4CFB2A8 /* Stint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7DC688954379BDEDD232AC /* Stint.swift */; };
+		12FC0DFF8D1A82859671548C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DDDDC2238D5F91F57CEF2B /* Weather.swift */; };
+		7B8D3CD5F3B0106133FF656A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B5AACCF9200FB2B1CC134B /* APIClient.swift */; };
+		192CE5615B205D15AF971606 /* JolpicaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152AD0961FEA09CFF0BA1077 /* JolpicaService.swift */; };
+		AFD63F8846A5D59B645D87B0 /* OpenF1Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4636E3FB0348D025EC1749FF /* OpenF1Service.swift */; };
+		735EE159C053917047511EA1 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF45A6FF6C36D66D51F14E /* CalendarViewModel.swift */; };
+		28E7AEF8B29A11FE9FEB84C6 /* CompanionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD48F3E78D733473B1AA9C82 /* CompanionViewModel.swift */; };
+		DEF232E43AFB7F3A817AC405 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC54DB6D53EFACC95AC75108 /* DashboardViewModel.swift */; };
+		4E8F901746057B5F5C31DF86 /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D571182AEA771A338CC2BCA7 /* LearnViewModel.swift */; };
+		FD3527C29787C5E597085AB8 /* StandingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD06320EECD57A03CE12985F /* StandingsViewModel.swift */; };
+		F06B72F3010F1B18BB034296 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CD7C8EBBECE04FAC00E164 /* CalendarView.swift */; };
+		C194A8C4B5A67F06F29DFF74 /* RaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E413A3EFBD3030012A5D6 /* RaceCardView.swift */; };
+		D347948AD989ABE79C4D65E3 /* SessionTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D382BC8E46DA4FEBDD4C8AF6 /* SessionTimesView.swift */; };
+		47C6A1C0DA21509A790A4A67 /* CompanionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F257724A6D45F4B80FF453A9 /* CompanionView.swift */; };
+		0F796447C55BC2220A315D3A /* RaceEventsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33420C46500744CD8B10F47F /* RaceEventsPanelView.swift */; };
+		DE0E8B86735CC78B42932FC6 /* ReplayControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D9A6882D5790019B5F49E8 /* ReplayControlsView.swift */; };
+		6110C5538143A1843F5B7DBA /* SessionBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADBB49D5C6A9662BE42604 /* SessionBannerView.swift */; };
+		47B239AF42847FF610918861 /* TireStrategyPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD1E4781E11E9055B800D9F /* TireStrategyPanelView.swift */; };
+		5FC4A4B6ED5D6B7063FC1645 /* WeatherPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C796C9237AC3824B3AB55 /* WeatherPanelView.swift */; };
+		F44077C07CBADD5390A28224 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB8B78C60389FDB5A19439C /* DashboardView.swift */; };
+		B36D8F6A11CF4959FDFF2F09 /* NextRaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1846605760E07390351A18 /* NextRaceCardView.swift */; };
+		C45715AEF697B7A5386CC5CE /* SeasonProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CBBD0819C23F353B64174E /* SeasonProgressView.swift */; };
+		1771BB856DAAF8A8C88E8838 /* StandingsSnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1BB1AADE972151FA344B2B /* StandingsSnapshotView.swift */; };
+		EE1414F6D84BEE56897D5D66 /* FlagsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2219D929BAF1CD8877D79094 /* FlagsSectionView.swift */; };
+		A547A3326E928CAAEAE4D261 /* GlossarySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA1E067E341EB322717BA9 /* GlossarySectionView.swift */; };
+		EE3AA89F8D5ADB9269113BF6 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5169E2CB08C7B1F6E2F9E835 /* LearnView.swift */; };
+		A3660072F9BE59CC71DA95A5 /* PointsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A3F2F13C4F1D2AE7565A35 /* PointsSectionView.swift */; };
+		69ADFF15DA0220252820470F /* StrategySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE3F44F52178A3217A579 /* StrategySectionView.swift */; };
+		4E9D669FFF2A92137C66EE86 /* WeekendSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BCCCA3D5F91B0510C8FCFA /* WeekendSectionView.swift */; };
+		3512B1C6187F9964F22E1FB5 /* ConstructorStandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C238EFD644245E93FA5962E0 /* ConstructorStandingsView.swift */; };
+		5EAA3816C67ADBB409CF0AD6 /* DriverStandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8BACE33495729AE40A7E /* DriverStandingsView.swift */; };
+		66840E919B6C27DF51794AFB /* StandingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273021B31D14E5B9BDE0F3E /* StandingsView.swift */; };
+		FE1A8AE948BCD3FE8109F904 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BAB633A4D4F948B12EF6271 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		345EBF4DB7B3FDD3CFA39887 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ContentView.swift"; path = "ContentView.swift"; sourceTree = "<group>"; };
+		C10491AA94ED1D4C0A26E5C2 /* PitwallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PitwallApp.swift"; path = "PitwallApp.swift"; sourceTree = "<group>"; };
+		D0497F0C317FEE209E5DB6BC /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BadgeView.swift"; path = "Components/BadgeView.swift"; sourceTree = "<group>"; };
+		77CDC6503A65C8B00A0F062C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CardView.swift"; path = "Components/CardView.swift"; sourceTree = "<group>"; };
+		86B37E9C28FA2D725BD20CA2 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CountdownView.swift"; path = "Components/CountdownView.swift"; sourceTree = "<group>"; };
+		1EE98488AA65BD44CA04406E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ErrorView.swift"; path = "Components/ErrorView.swift"; sourceTree = "<group>"; };
+		FA6DEC35DD12DC358A31F59A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoadingView.swift"; path = "Components/LoadingView.swift"; sourceTree = "<group>"; };
+		5C4635E05DFD4178D37E06F8 /* TeamColorBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TeamColorBarView.swift"; path = "Components/TeamColorBarView.swift"; sourceTree = "<group>"; };
+		61465605890278D991C894F9 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Design.swift"; path = "Constants/Design.swift"; sourceTree = "<group>"; };
+		B7E7EACF9EC01CDE5F2B0FF4 /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Flags.swift"; path = "Constants/Flags.swift"; sourceTree = "<group>"; };
+		E86318060E25B6D207B6ED1C /* Glossary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Glossary.swift"; path = "Constants/Glossary.swift"; sourceTree = "<group>"; };
+		95E8CE4098BA1B62506EA8B0 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Teams.swift"; path = "Constants/Teams.swift"; sourceTree = "<group>"; };
+		22E51DFBE3C129DBFA5A7F03 /* TireCompounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TireCompounds.swift"; path = "Constants/TireCompounds.swift"; sourceTree = "<group>"; };
+		9E08A4F07A555F2DB001C20D /* WeekendFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeekendFormat.swift"; path = "Constants/WeekendFormat.swift"; sourceTree = "<group>"; };
+		CF5EC6653A1212D72A52A172 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MockData.swift"; path = "Models/MockData.swift"; sourceTree = "<group>"; };
+		7D2EA4791B1BDBC27EF82DCE /* Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Race.swift"; path = "Models/Race.swift"; sourceTree = "<group>"; };
+		8B6F507C78EAC23CE4BBA385 /* RaceEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RaceEvent.swift"; path = "Models/RaceEvent.swift"; sourceTree = "<group>"; };
+		92B968BD2E99308BFAA084D9 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session.swift"; path = "Models/Session.swift"; sourceTree = "<group>"; };
+		0157E51584FDEBFF63D96044 /* Standing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Standing.swift"; path = "Models/Standing.swift"; sourceTree = "<group>"; };
+		3F7DC688954379BDEDD232AC /* Stint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Stint.swift"; path = "Models/Stint.swift"; sourceTree = "<group>"; };
+		C3DDDDC2238D5F91F57CEF2B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Weather.swift"; path = "Models/Weather.swift"; sourceTree = "<group>"; };
+		B8B5AACCF9200FB2B1CC134B /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "APIClient.swift"; path = "Services/APIClient.swift"; sourceTree = "<group>"; };
+		152AD0961FEA09CFF0BA1077 /* JolpicaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JolpicaService.swift"; path = "Services/JolpicaService.swift"; sourceTree = "<group>"; };
+		4636E3FB0348D025EC1749FF /* OpenF1Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OpenF1Service.swift"; path = "Services/OpenF1Service.swift"; sourceTree = "<group>"; };
+		4CEF45A6FF6C36D66D51F14E /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CalendarViewModel.swift"; path = "ViewModels/CalendarViewModel.swift"; sourceTree = "<group>"; };
+		BD48F3E78D733473B1AA9C82 /* CompanionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CompanionViewModel.swift"; path = "ViewModels/CompanionViewModel.swift"; sourceTree = "<group>"; };
+		FC54DB6D53EFACC95AC75108 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DashboardViewModel.swift"; path = "ViewModels/DashboardViewModel.swift"; sourceTree = "<group>"; };
+		D571182AEA771A338CC2BCA7 /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LearnViewModel.swift"; path = "ViewModels/LearnViewModel.swift"; sourceTree = "<group>"; };
+		DD06320EECD57A03CE12985F /* StandingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StandingsViewModel.swift"; path = "ViewModels/StandingsViewModel.swift"; sourceTree = "<group>"; };
+		80CD7C8EBBECE04FAC00E164 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CalendarView.swift"; path = "Views/Calendar/CalendarView.swift"; sourceTree = "<group>"; };
+		017E413A3EFBD3030012A5D6 /* RaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RaceCardView.swift"; path = "Views/Calendar/RaceCardView.swift"; sourceTree = "<group>"; };
+		D382BC8E46DA4FEBDD4C8AF6 /* SessionTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SessionTimesView.swift"; path = "Views/Calendar/SessionTimesView.swift"; sourceTree = "<group>"; };
+		F257724A6D45F4B80FF453A9 /* CompanionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CompanionView.swift"; path = "Views/Companion/CompanionView.swift"; sourceTree = "<group>"; };
+		33420C46500744CD8B10F47F /* RaceEventsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RaceEventsPanelView.swift"; path = "Views/Companion/RaceEventsPanelView.swift"; sourceTree = "<group>"; };
+		D9D9A6882D5790019B5F49E8 /* ReplayControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ReplayControlsView.swift"; path = "Views/Companion/ReplayControlsView.swift"; sourceTree = "<group>"; };
+		CDADBB49D5C6A9662BE42604 /* SessionBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SessionBannerView.swift"; path = "Views/Companion/SessionBannerView.swift"; sourceTree = "<group>"; };
+		8CD1E4781E11E9055B800D9F /* TireStrategyPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TireStrategyPanelView.swift"; path = "Views/Companion/TireStrategyPanelView.swift"; sourceTree = "<group>"; };
+		7D4C796C9237AC3824B3AB55 /* WeatherPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeatherPanelView.swift"; path = "Views/Companion/WeatherPanelView.swift"; sourceTree = "<group>"; };
+		8EB8B78C60389FDB5A19439C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DashboardView.swift"; path = "Views/Dashboard/DashboardView.swift"; sourceTree = "<group>"; };
+		6C1846605760E07390351A18 /* NextRaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NextRaceCardView.swift"; path = "Views/Dashboard/NextRaceCardView.swift"; sourceTree = "<group>"; };
+		F0CBBD0819C23F353B64174E /* SeasonProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SeasonProgressView.swift"; path = "Views/Dashboard/SeasonProgressView.swift"; sourceTree = "<group>"; };
+		0D1BB1AADE972151FA344B2B /* StandingsSnapshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StandingsSnapshotView.swift"; path = "Views/Dashboard/StandingsSnapshotView.swift"; sourceTree = "<group>"; };
+		2219D929BAF1CD8877D79094 /* FlagsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FlagsSectionView.swift"; path = "Views/Learn/FlagsSectionView.swift"; sourceTree = "<group>"; };
+		7DBA1E067E341EB322717BA9 /* GlossarySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "GlossarySectionView.swift"; path = "Views/Learn/GlossarySectionView.swift"; sourceTree = "<group>"; };
+		5169E2CB08C7B1F6E2F9E835 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LearnView.swift"; path = "Views/Learn/LearnView.swift"; sourceTree = "<group>"; };
+		C5A3F2F13C4F1D2AE7565A35 /* PointsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PointsSectionView.swift"; path = "Views/Learn/PointsSectionView.swift"; sourceTree = "<group>"; };
+		B56BE3F44F52178A3217A579 /* StrategySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StrategySectionView.swift"; path = "Views/Learn/StrategySectionView.swift"; sourceTree = "<group>"; };
+		30BCCCA3D5F91B0510C8FCFA /* WeekendSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeekendSectionView.swift"; path = "Views/Learn/WeekendSectionView.swift"; sourceTree = "<group>"; };
+		C238EFD644245E93FA5962E0 /* ConstructorStandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ConstructorStandingsView.swift"; path = "Views/Standings/ConstructorStandingsView.swift"; sourceTree = "<group>"; };
+		9C0B8BACE33495729AE40A7E /* DriverStandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DriverStandingsView.swift"; path = "Views/Standings/DriverStandingsView.swift"; sourceTree = "<group>"; };
+		E273021B31D14E5B9BDE0F3E /* StandingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StandingsView.swift"; path = "Views/Standings/StandingsView.swift"; sourceTree = "<group>"; };
+		4BAB633A4D4F948B12EF6271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		5141EFFF35ACD6C51F274E4D /* Pitwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pitwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9E872B0C4F3AB11D258C39F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A85897F1A32FE9B91C081CD = {
+			isa = PBXGroup;
+			children = (
+				56FE27407A45CCF8BE91779A /* Pitwall */,
+				B88D7E26791946AEFDCC8BB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56FE27407A45CCF8BE91779A /* Pitwall */ = {
+			isa = PBXGroup;
+			children = (
+				345EBF4DB7B3FDD3CFA39887 /* ContentView.swift */,
+				C10491AA94ED1D4C0A26E5C2 /* PitwallApp.swift */,
+				D0497F0C317FEE209E5DB6BC /* BadgeView.swift */,
+				77CDC6503A65C8B00A0F062C /* CardView.swift */,
+				86B37E9C28FA2D725BD20CA2 /* CountdownView.swift */,
+				1EE98488AA65BD44CA04406E /* ErrorView.swift */,
+				FA6DEC35DD12DC358A31F59A /* LoadingView.swift */,
+				5C4635E05DFD4178D37E06F8 /* TeamColorBarView.swift */,
+				61465605890278D991C894F9 /* Design.swift */,
+				B7E7EACF9EC01CDE5F2B0FF4 /* Flags.swift */,
+				E86318060E25B6D207B6ED1C /* Glossary.swift */,
+				95E8CE4098BA1B62506EA8B0 /* Teams.swift */,
+				22E51DFBE3C129DBFA5A7F03 /* TireCompounds.swift */,
+				9E08A4F07A555F2DB001C20D /* WeekendFormat.swift */,
+				CF5EC6653A1212D72A52A172 /* MockData.swift */,
+				7D2EA4791B1BDBC27EF82DCE /* Race.swift */,
+				8B6F507C78EAC23CE4BBA385 /* RaceEvent.swift */,
+				92B968BD2E99308BFAA084D9 /* Session.swift */,
+				0157E51584FDEBFF63D96044 /* Standing.swift */,
+				3F7DC688954379BDEDD232AC /* Stint.swift */,
+				C3DDDDC2238D5F91F57CEF2B /* Weather.swift */,
+				B8B5AACCF9200FB2B1CC134B /* APIClient.swift */,
+				152AD0961FEA09CFF0BA1077 /* JolpicaService.swift */,
+				4636E3FB0348D025EC1749FF /* OpenF1Service.swift */,
+				4CEF45A6FF6C36D66D51F14E /* CalendarViewModel.swift */,
+				BD48F3E78D733473B1AA9C82 /* CompanionViewModel.swift */,
+				FC54DB6D53EFACC95AC75108 /* DashboardViewModel.swift */,
+				D571182AEA771A338CC2BCA7 /* LearnViewModel.swift */,
+				DD06320EECD57A03CE12985F /* StandingsViewModel.swift */,
+				80CD7C8EBBECE04FAC00E164 /* CalendarView.swift */,
+				017E413A3EFBD3030012A5D6 /* RaceCardView.swift */,
+				D382BC8E46DA4FEBDD4C8AF6 /* SessionTimesView.swift */,
+				F257724A6D45F4B80FF453A9 /* CompanionView.swift */,
+				33420C46500744CD8B10F47F /* RaceEventsPanelView.swift */,
+				D9D9A6882D5790019B5F49E8 /* ReplayControlsView.swift */,
+				CDADBB49D5C6A9662BE42604 /* SessionBannerView.swift */,
+				8CD1E4781E11E9055B800D9F /* TireStrategyPanelView.swift */,
+				7D4C796C9237AC3824B3AB55 /* WeatherPanelView.swift */,
+				8EB8B78C60389FDB5A19439C /* DashboardView.swift */,
+				6C1846605760E07390351A18 /* NextRaceCardView.swift */,
+				F0CBBD0819C23F353B64174E /* SeasonProgressView.swift */,
+				0D1BB1AADE972151FA344B2B /* StandingsSnapshotView.swift */,
+				2219D929BAF1CD8877D79094 /* FlagsSectionView.swift */,
+				7DBA1E067E341EB322717BA9 /* GlossarySectionView.swift */,
+				5169E2CB08C7B1F6E2F9E835 /* LearnView.swift */,
+				C5A3F2F13C4F1D2AE7565A35 /* PointsSectionView.swift */,
+				B56BE3F44F52178A3217A579 /* StrategySectionView.swift */,
+				30BCCCA3D5F91B0510C8FCFA /* WeekendSectionView.swift */,
+				C238EFD644245E93FA5962E0 /* ConstructorStandingsView.swift */,
+				9C0B8BACE33495729AE40A7E /* DriverStandingsView.swift */,
+				E273021B31D14E5B9BDE0F3E /* StandingsView.swift */,
+				4BAB633A4D4F948B12EF6271 /* Info.plist */,
+			);
+			name = Pitwall;
+			path = Pitwall;
+			sourceTree = "<group>";
+		};
+		B88D7E26791946AEFDCC8BB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5141EFFF35ACD6C51F274E4D /* Pitwall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16FCDF1155BFA8B8D63144D7 /* Pitwall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A896B77C44E9302BC7C1C334 /* Build configuration list for PBXNativeTarget "Pitwall" */;
+			buildPhases = (
+				7EE609159AC086BAB15FF998 /* Sources */,
+				A9E872B0C4F3AB11D258C39F /* Frameworks */,
+				A2892AFC2D88060C0AA91373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pitwall;
+			productName = Pitwall;
+			productReference = 5141EFFF35ACD6C51F274E4D /* Pitwall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1781F676DEDF5767F3243DB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					16FCDF1155BFA8B8D63144D7 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 1E701A5F9C80F4B5DADD1F3C /* Build configuration list for PBXProject "Pitwall" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A85897F1A32FE9B91C081CD;
+			productRefGroup = B88D7E26791946AEFDCC8BB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16FCDF1155BFA8B8D63144D7 /* Pitwall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2892AFC2D88060C0AA91373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EE609159AC086BAB15FF998 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1989A9ACCCCE6FB6C4DF68 /* ContentView.swift in Sources */,
+				E865F055132A95A6F38EF8C0 /* PitwallApp.swift in Sources */,
+				46FE16FB30FFFBD4AF2AC4FE /* BadgeView.swift in Sources */,
+				4203BCD01D69C618E6F627E3 /* CardView.swift in Sources */,
+				3C58A510525C339E8D0989F3 /* CountdownView.swift in Sources */,
+				75B7A84C9CDCABCD112D03F3 /* ErrorView.swift in Sources */,
+				D94C48EA9A8F1AAAE825F6AD /* LoadingView.swift in Sources */,
+				77515E3C96B2991E642AC778 /* TeamColorBarView.swift in Sources */,
+				FFECC3D4314C4C3ECF97589F /* Design.swift in Sources */,
+				7CCDDDF51CFABE159108BFD3 /* Flags.swift in Sources */,
+				A09BFD74983125B9D6D22A86 /* Glossary.swift in Sources */,
+				954206C3E75F7DBC5F714A93 /* Teams.swift in Sources */,
+				F6F3F5EFB9161E0BD574409F /* TireCompounds.swift in Sources */,
+				E496853F8F80F5DB58EC9947 /* WeekendFormat.swift in Sources */,
+				82931CD0BB544DFA7CDDC3AD /* MockData.swift in Sources */,
+				2E9FDD5EB7FDE45826C818B0 /* Race.swift in Sources */,
+				A5F4635AA7DFBA58E844C4D5 /* RaceEvent.swift in Sources */,
+				04ABD9DAF1F506793DD2CE12 /* Session.swift in Sources */,
+				1FF7FF9B9ABE548B4FFCAEC1 /* Standing.swift in Sources */,
+				967329526F9D081DA4CFB2A8 /* Stint.swift in Sources */,
+				12FC0DFF8D1A82859671548C /* Weather.swift in Sources */,
+				7B8D3CD5F3B0106133FF656A /* APIClient.swift in Sources */,
+				192CE5615B205D15AF971606 /* JolpicaService.swift in Sources */,
+				AFD63F8846A5D59B645D87B0 /* OpenF1Service.swift in Sources */,
+				735EE159C053917047511EA1 /* CalendarViewModel.swift in Sources */,
+				28E7AEF8B29A11FE9FEB84C6 /* CompanionViewModel.swift in Sources */,
+				DEF232E43AFB7F3A817AC405 /* DashboardViewModel.swift in Sources */,
+				4E8F901746057B5F5C31DF86 /* LearnViewModel.swift in Sources */,
+				FD3527C29787C5E597085AB8 /* StandingsViewModel.swift in Sources */,
+				F06B72F3010F1B18BB034296 /* CalendarView.swift in Sources */,
+				C194A8C4B5A67F06F29DFF74 /* RaceCardView.swift in Sources */,
+				D347948AD989ABE79C4D65E3 /* SessionTimesView.swift in Sources */,
+				47C6A1C0DA21509A790A4A67 /* CompanionView.swift in Sources */,
+				0F796447C55BC2220A315D3A /* RaceEventsPanelView.swift in Sources */,
+				DE0E8B86735CC78B42932FC6 /* ReplayControlsView.swift in Sources */,
+				6110C5538143A1843F5B7DBA /* SessionBannerView.swift in Sources */,
+				47B239AF42847FF610918861 /* TireStrategyPanelView.swift in Sources */,
+				5FC4A4B6ED5D6B7063FC1645 /* WeatherPanelView.swift in Sources */,
+				F44077C07CBADD5390A28224 /* DashboardView.swift in Sources */,
+				B36D8F6A11CF4959FDFF2F09 /* NextRaceCardView.swift in Sources */,
+				C45715AEF697B7A5386CC5CE /* SeasonProgressView.swift in Sources */,
+				1771BB856DAAF8A8C88E8838 /* StandingsSnapshotView.swift in Sources */,
+				EE1414F6D84BEE56897D5D66 /* FlagsSectionView.swift in Sources */,
+				A547A3326E928CAAEAE4D261 /* GlossarySectionView.swift in Sources */,
+				EE3AA89F8D5ADB9269113BF6 /* LearnView.swift in Sources */,
+				A3660072F9BE59CC71DA95A5 /* PointsSectionView.swift in Sources */,
+				69ADFF15DA0220252820470F /* StrategySectionView.swift in Sources */,
+				4E9D669FFF2A92137C66EE86 /* WeekendSectionView.swift in Sources */,
+				3512B1C6187F9964F22E1FB5 /* ConstructorStandingsView.swift in Sources */,
+				5EAA3816C67ADBB409CF0AD6 /* DriverStandingsView.swift in Sources */,
+				66840E919B6C27DF51794AFB /* StandingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		642436854D86EF337D2CEE9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphonesimulator;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00F007E16B7B8DF31EA0226B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphonesimulator;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37A72370ED58F3DA5611E01C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASPETRATIO_MEDIA_FILL_BEHAVIOR = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Pitwall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pitwall.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphonesimulator;
+				SUPPORTED_PLATFORMS = iphonesimulator;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		44C732A3BAC66107F8E923F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASPETRATIO_MEDIA_FILL_BEHAVIOR = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Pitwall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pitwall.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphonesimulator;
+				SUPPORTED_PLATFORMS = iphonesimulator;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E701A5F9C80F4B5DADD1F3C /* Build configuration list for PBXProject "Pitwall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				642436854D86EF337D2CEE9D /* Debug */,
+				00F007E16B7B8DF31EA0226B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A896B77C44E9302BC7C1C334 /* Build configuration list for PBXNativeTarget "Pitwall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37A72370ED58F3DA5611E01C /* Debug */,
+				44C732A3BAC66107F8E923F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 1781F676DEDF5767F3243DB0 /* Project object */;
+}

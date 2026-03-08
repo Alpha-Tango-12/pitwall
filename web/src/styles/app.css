@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-f1-red: #E10600;
+  --color-f1-red-dark: #B80500;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
