@@ -53,6 +53,18 @@ export interface QualifyingResult {
   q3?: string;
 }
 
+export interface TrackProfile {
+  laps: number;
+  length: string;
+  lapRecord: string;
+  drsZones: number;
+  tireDegradation: "low" | "medium" | "high";
+  overtakingDifficulty: "easy" | "medium" | "hard";
+  characteristics: string[];
+  whatMakesItUnique: string;
+  keyCorners: string[];
+}
+
 export interface StrategyPrediction {
   constructorId: string;
   teamName: string;

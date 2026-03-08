@@ -6,6 +6,25 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const STRATEGY_SCHEMA = {
   type: "object",
   properties: {
+    trackProfile: {
+      type: "object",
+      properties: {
+        laps: { type: "integer" },
+        length: { type: "string" },
+        lapRecord: { type: "string" },
+        drsZones: { type: "integer" },
+        tireDegradation: { type: "string", enum: ["low", "medium", "high"] },
+        overtakingDifficulty: { type: "string", enum: ["easy", "medium", "hard"] },
+        characteristics: { type: "array", items: { type: "string" } },
+        whatMakesItUnique: { type: "string" },
+        keyCorners: { type: "array", items: { type: "string" } },
+      },
+      required: [
+        "laps", "length", "lapRecord", "drsZones", "tireDegradation",
+        "overtakingDifficulty", "characteristics", "whatMakesItUnique", "keyCorners",
+      ],
+      additionalProperties: false,
+    },
     strategies: {
       type: "array",
       items: {
@@ -23,7 +42,7 @@ const STRATEGY_SCHEMA = {
       },
     },
   },
-  required: ["strategies"],
+  required: ["trackProfile", "strategies"],
   additionalProperties: false,
 } as const;
 
@@ -54,37 +73,42 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const teamList = TEAMS.map((t) => `- ${t.name} (${t.constructorId}): ${t.drivers}`).join("\n");
 
-  const prompt = `You are an expert F1 strategy analyst. Predict the most likely race strategy for each team at the ${raceName} (${circuitName}) in the 2026 Formula 1 season.
+  const prompt = `You are an expert F1 analyst writing for casual fans who want to understand what makes each race unique. Generate a track profile and team strategy predictions for the ${raceName} (${circuitName}) in the 2026 Formula 1 season.
 
 Teams and drivers:
 ${teamList}
 
-For each team, provide:
-- constructorId: the exact ID from the list above (e.g. "red_bull", "ferrari")
-- teamName: team display name
-- stops: number of pit stops (1 or 2, occasionally 3 for struggling teams)
-- compounds: ordered array of tire compounds used (e.g. ["SOFT", "MEDIUM", "HARD"]). Valid values: SOFT, MEDIUM, HARD, INTERMEDIATE, WET
-- pitWindows: predicted pit stop laps (e.g. ["Lap 18-22", "Lap 40-45"])
-- prediction: 2-3 sentence plain-language explanation of the strategy, written for a casual fan. Mention why the team chose this approach, any undercut/overcut opportunities, and what to watch for.
+TRACK PROFILE — provide:
+- laps: number of race laps
+- length: circuit length in km (e.g. "5.513 km")
+- lapRecord: fastest lap record (driver, team, time, year — e.g. "Charles Leclerc, Ferrari, 1:19.813, 2022")
+- drsZones: number of DRS detection/activation zones
+- tireDegradation: "low", "medium", or "high" — how hard the circuit is on tires
+- overtakingDifficulty: "easy", "medium", or "hard" — how hard it is to pass
+- characteristics: 3–5 short tags that capture the circuit's feel (e.g. "High-speed", "Street circuit", "Heavy braking zones", "Lots of slow corners")
+- whatMakesItUnique: 2–3 sentences written for a casual fan. Explain the personality of this circuit — what separates it from every other race on the calendar, what atmosphere or challenge defines it.
+- keyCorners: 2–3 named corners that are iconic or strategically important, with a short reason each (e.g. "Turn 8 — high-speed sweep, crucial for traction onto the back straight")
 
-Base your predictions on:
-- The circuit characteristics of ${circuitName} (tire deg, overtaking difficulty, pit lane delta)
-- Each team's typical strategic approach in 2026
-- The starting grid positions (front runners have more strategic flexibility)
-- General 2026 Pirelli compound behavior
+TEAM STRATEGIES — for each team provide:
+- constructorId: exact ID from the list above
+- teamName: display name
+- stops: number of pit stops
+- compounds: ordered tire compound array. Valid values: SOFT, MEDIUM, HARD, INTERMEDIATE, WET
+- pitWindows: predicted pit lap ranges (e.g. ["Lap 18-22", "Lap 40-45"])
+- prediction: 2–3 sentences for a casual fan. Why this strategy, what to watch for, any undercut/overcut opportunity.
 
 Return strategies for all 11 teams.`;
 
   try {
     const response = await client.messages.create({
       model: "claude-opus-4-6",
-      max_tokens: 4096,
+      max_tokens: 5000,
       thinking: { type: "adaptive" },
       messages: [{ role: "user", content: prompt }],
       output_config: {
         format: {
           type: "json_schema",
-          name: "race_strategies",
+          name: "race_strategy_brief",
           schema: STRATEGY_SCHEMA,
         },
       },
@@ -95,7 +119,7 @@ Return strategies for all 11 teams.`;
       return res.status(500).json({ error: "No text response from Claude" });
     }
 
-    const data = JSON.parse(textBlock.text) as { strategies: unknown[] };
+    const data = JSON.parse(textBlock.text);
     return res.status(200).json(data);
   } catch (err) {
     console.error("Claude API error:", err);
