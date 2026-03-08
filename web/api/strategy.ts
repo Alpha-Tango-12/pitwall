@@ -1,6 +1,8 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import Anthropic from "@anthropic-ai/sdk";
 
+export const config = { maxDuration: 60 };
+
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const STRATEGY_SCHEMA = {
@@ -103,7 +105,6 @@ Return strategies for all 11 teams.`;
     const response = await client.messages.create({
       model: "claude-opus-4-6",
       max_tokens: 5000,
-      thinking: { type: "adaptive" },
       messages: [{ role: "user", content: prompt }],
       output_config: {
         format: {
