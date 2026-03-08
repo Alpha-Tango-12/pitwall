@@ -164,13 +164,15 @@ function StrategyCard({ strategy }: { strategy: StrategyPrediction }) {
 }
 
 export function StrategyPage() {
-  const { data: schedule = [] } = useRaceSchedule("2026");
+  const { data: schedule = [], isLoading: scheduleLoading } = useRaceSchedule("2026");
   const nextRace = schedule.find((r) => !r.isPast);
 
-  const { data, isLoading, error } = useTeamStrategies(
+  const { data, isLoading: strategiesLoading, error } = useTeamStrategies(
     nextRace?.raceName,
     nextRace?.circuitName,
   );
+
+  const isLoading = scheduleLoading || (!!nextRace && strategiesLoading);
 
   return (
     <div>
@@ -183,13 +185,21 @@ export function StrategyPage() {
         <Card>
           <div className="flex flex-col items-center gap-3 py-6">
             <LoadingSpinner />
-            <p className="text-sm text-zinc-500">Analysing track & strategies with AI…</p>
+            <p className="text-sm text-zinc-500">
+              {scheduleLoading ? "Loading schedule…" : "Analysing track & strategies with AI…"}
+            </p>
           </div>
         </Card>
       )}
 
+      {!isLoading && !nextRace && (
+        <Card>
+          <p className="py-4 text-center text-sm text-zinc-500">No upcoming race found.</p>
+        </Card>
+      )}
+
       {!isLoading && error && (
-        <ErrorCard message="Could not load strategy predictions. Make sure the API key is configured." />
+        <ErrorCard message="Could not load strategy predictions. Check the Vercel function logs for details." />
       )}
 
       {!isLoading && !error && data && (
