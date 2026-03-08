@@ -6,6 +6,7 @@ import { CalendarPage } from "@/routes/CalendarPage";
 import { StandingsPage } from "@/routes/StandingsPage";
 import { CompanionPage } from "@/routes/CompanionPage";
 import { LearnPage } from "@/routes/LearnPage";
+import { StrategyPage } from "@/routes/StrategyPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,6 +28,7 @@ export function App() {
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/standings" element={<StandingsPage />} />
             <Route path="/companion" element={<CompanionPage />} />
+            <Route path="/strategy" element={<StrategyPage />} />
             <Route path="/learn" element={<LearnPage />} />
           </Route>
         </Routes>

@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, CalendarDays, Trophy, Radio, BookOpen } from "lucide-react";
+import { LayoutDashboard, CalendarDays, Trophy, Radio, BookOpen, Brain } from "lucide-react";
 
 const NAV_ITEMS = [
   { to: "/", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/calendar", icon: CalendarDays, label: "Calendar" },
   { to: "/standings", icon: Trophy, label: "Standings" },
   { to: "/companion", icon: Radio, label: "Companion" },
+  { to: "/strategy", icon: Brain, label: "Strategy" },
   { to: "/learn", icon: BookOpen, label: "Learn F1" },
 ] as const;
 

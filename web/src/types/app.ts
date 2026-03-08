@@ -53,6 +53,16 @@ export interface QualifyingResult {
   q3?: string;
 }
 
+export interface StrategyPrediction {
+  constructorId: string;
+  teamName: string;
+  stops: number;
+  compounds: TireCompound[];
+  pitWindows: string[];
+  prediction: string;
+  teamColor: string;
+}
+
 export type TireCompound = "SOFT" | "MEDIUM" | "HARD" | "INTERMEDIATE" | "WET";
 
 export interface Stint {
