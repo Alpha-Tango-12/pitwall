@@ -5,49 +5,6 @@ export const config = { maxDuration: 60 };
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-const STRATEGY_SCHEMA = {
-  type: "object",
-  properties: {
-    trackProfile: {
-      type: "object",
-      properties: {
-        laps: { type: "integer" },
-        length: { type: "string" },
-        lapRecord: { type: "string" },
-        drsZones: { type: "integer" },
-        tireDegradation: { type: "string", enum: ["low", "medium", "high"] },
-        overtakingDifficulty: { type: "string", enum: ["easy", "medium", "hard"] },
-        characteristics: { type: "array", items: { type: "string" } },
-        whatMakesItUnique: { type: "string" },
-        keyCorners: { type: "array", items: { type: "string" } },
-      },
-      required: [
-        "laps", "length", "lapRecord", "drsZones", "tireDegradation",
-        "overtakingDifficulty", "characteristics", "whatMakesItUnique", "keyCorners",
-      ],
-      additionalProperties: false,
-    },
-    strategies: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
-          constructorId: { type: "string" },
-          teamName: { type: "string" },
-          stops: { type: "integer" },
-          compounds: { type: "array", items: { type: "string" } },
-          pitWindows: { type: "array", items: { type: "string" } },
-          prediction: { type: "string" },
-        },
-        required: ["constructorId", "teamName", "stops", "compounds", "pitWindows", "prediction"],
-        additionalProperties: false,
-      },
-    },
-  },
-  required: ["trackProfile", "strategies"],
-  additionalProperties: false,
-} as const;
-
 const TEAMS = [
   { constructorId: "red_bull", name: "Red Bull Racing", drivers: "Max Verstappen & Isack Hadjar" },
   { constructorId: "ferrari", name: "Ferrari", drivers: "Charles Leclerc & Lewis Hamilton" },
@@ -75,7 +32,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const teamList = TEAMS.map((t) => `- ${t.name} (${t.constructorId}): ${t.drivers}`).join("\n");
 
-  const prompt = `You are an expert F1 analyst writing for casual fans who want to understand what makes each race unique. Generate a track profile and team strategy predictions for the ${raceName} (${circuitName}) in the 2026 Formula 1 season.
+  const prompt = `You are an expert F1 analyst writing for casual fans. Respond with a single valid JSON object — no markdown, no code fences, just raw JSON.
+
+Generate a track profile and team strategy predictions for the ${raceName} (${circuitName}) in the 2026 Formula 1 season.
 
 Teams and drivers:
 ${teamList}
@@ -99,20 +58,38 @@ TEAM STRATEGIES — for each team provide:
 - pitWindows: predicted pit lap ranges (e.g. ["Lap 18-22", "Lap 40-45"])
 - prediction: 2–3 sentences for a casual fan. Why this strategy, what to watch for, any undercut/overcut opportunity.
 
-Return strategies for all 11 teams.`;
+Return strategies for all 11 teams.
+
+Respond with this exact JSON shape:
+{
+  "trackProfile": {
+    "laps": <integer>,
+    "length": "<e.g. 5.513 km>",
+    "lapRecord": "<Driver, Team, Time, Year>",
+    "drsZones": <integer>,
+    "tireDegradation": "<low|medium|high>",
+    "overtakingDifficulty": "<easy|medium|hard>",
+    "characteristics": ["<tag>", ...],
+    "whatMakesItUnique": "<2-3 sentences for a casual fan>",
+    "keyCorners": ["<Corner name — reason>", ...]
+  },
+  "strategies": [
+    {
+      "constructorId": "<id>",
+      "teamName": "<name>",
+      "stops": <integer>,
+      "compounds": ["SOFT|MEDIUM|HARD|INTERMEDIATE|WET", ...],
+      "pitWindows": ["Lap X-Y", ...],
+      "prediction": "<2-3 sentences for a casual fan>"
+    }
+  ]
+}`;
 
   try {
     const response = await client.messages.create({
       model: "claude-opus-4-6",
       max_tokens: 5000,
       messages: [{ role: "user", content: prompt }],
-      output_config: {
-        format: {
-          type: "json_schema",
-          name: "race_strategy_brief",
-          schema: STRATEGY_SCHEMA,
-        },
-      },
     });
 
     const textBlock = response.content.find((b) => b.type === "text");
